@@ -1,3 +1,4 @@
+import os
 import glob
 from dbfpy import dbf
 
@@ -31,7 +32,7 @@ if number in range(1, 6):
     # open all files that match the specified date and extract all log entries 
     # for the given station
     # F:\DAD\
-    for filename in glob.glob('./db/*%s.DBF' % date):
+    for filename in glob.glob(os.path.normpath('F:/DAD/Asplay/*%s.DBF' % date)):
         db = dbf.Dbf(filename)
         # print db
         for record in db:
@@ -45,7 +46,7 @@ if number in range(1, 6):
         # print len(log)
 
         # Create new db and setup record fields
-        db = dbf.Dbf("./db/%s-%s.DBF" % (station, date), new=True)
+        db = dbf.Dbf(os.path.normpath('C:/IMPORT/asplay/%s%s.DBF' % (station, date)), new=True)
         db.addField(
             ("CUT", "C", 5),
             ("STATUS", "C", 1),
