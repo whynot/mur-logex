@@ -12,7 +12,7 @@ from dbfpy import dbf
 day = ''
 month = ''
 year = ''
-valid_stations = ['KMTI', 'KLGL', 'KMGR', 'KWUT', 'KSVC']
+valid_stations = ['KMTI', 'KLGL', 'KMGR', 'KWUT', 'KSVC', 'KUTC']
 log = defaultdict(list)
 print "What date do you want to extract logs for?"
 print "Enter the date as: mm.dd.yyyy"
