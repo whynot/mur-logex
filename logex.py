@@ -106,3 +106,6 @@ if len(log) > 0:
     print "Log extraction is complete for %s/%s/%s" % (month, day, year)
 else:
     print "There are no log entries for %s/%s/%s" % (month, day, year)
+
+print "Press the ENTER key to exit."
+raw_input("> ")
